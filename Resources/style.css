@@ -1,0 +1,25 @@
+html{
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    font-size:18px!important;
+    line-height:1.6!important;
+}
+
+a{
+    text-decoration:none!important;
+}
+
+button,input,select,textarea{
+    font-size:17px!important;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+*{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
