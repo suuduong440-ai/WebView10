@@ -27,7 +27,15 @@ jobs:
             wget \
             dpkg \
             fakeroot \
-            ldid
+            build-essential
+
+      - name: Install ldid
+        run: |
+          git clone https://github.com/ldid-project/ldid.git
+          cd ldid
+          make
+          sudo cp ldid /usr/local/bin/ldid
+          ldid -h
 
       - name: Install Theos
         run: |
@@ -42,6 +50,7 @@ jobs:
         run: |
           echo "THEOS=$THEOS"
           ls $THEOS
+          ls $THEOS/sdks
 
       - name: Build package
         run: |
@@ -49,7 +58,7 @@ jobs:
           make clean
           make package FINALPACKAGE=1
 
-      - name: List packages
+      - name: Show package
         run: |
           ls -la packages/
 
