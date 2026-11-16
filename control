@@ -1,0 +1,9 @@
+Package: com.local.googleenhancer
+Name: GoogleEnhancer
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Safari enhancements for iOS 10
+Maintainer: You
+Author: You
+Section: Tweaks
+Depends: mobilesubstrate
